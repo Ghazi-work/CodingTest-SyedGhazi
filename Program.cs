@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using ProductsApi.Common.Persistence;
 using ProductsApi.Features.Health;
 using ProductsApi.Features.Products.CreateProduct;
+using ProductsApi.Features.Products.GetProducts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,7 @@ app.UseAuthorization();
 
 app.MapHealthEndpoint();
 app.MapCreateProductEndpoint();
+app.MapGetProductsEndpoint();
 
 app.Run();
 
