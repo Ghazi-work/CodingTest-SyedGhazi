@@ -8,6 +8,8 @@ namespace ProductsApi.IntegrationTests;
 
 public class ProductsApiFactory : WebApplicationFactory<Program>
 {
+    private readonly string _dbName = Guid.NewGuid().ToString();
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.ConfigureServices(services =>
@@ -20,7 +22,7 @@ public class ProductsApiFactory : WebApplicationFactory<Program>
                 services.Remove(d);
 
             services.AddDbContext<ProductsDbContext>(options =>
-                options.UseInMemoryDatabase("TestDb"));
+                options.UseInMemoryDatabase(_dbName));
         });
     }
 }
