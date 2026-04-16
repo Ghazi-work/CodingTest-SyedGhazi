@@ -1,3 +1,11 @@
+# Project Architecture
+
+Here is the high-level overview of our microservices:
+
+<p align="center">
+  <img src="./assets/architecture.svg" alt="Microservices Architecture Diagram" width="100%">
+</p>
+
 # Products API
 
 A .NET 8 Web API built with Vertical Slice Architecture, MediatR, and Entity Framework Core.
